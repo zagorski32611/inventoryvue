@@ -2,8 +2,6 @@ class ProductsController < ApplicationController
 
     def index
         @products = Product.all
-        @customers = Customer.all
-        @customer = Customer.new
     end
 
     def show
@@ -21,14 +19,14 @@ class ProductsController < ApplicationController
     def create
         @products = Product.new(products_params)
         @products.save
-        redirect_to products_path
+        redirect_to static_pages_path
     end
 
     def update
         @products = Product.find(params[:id])
         if @products.update(products_params)
             flash[:success] = "Updated product information"
-            redirect_to products_path
+            redirect_to static_pages_path
         else
             flash[:alert] = "Error!"
             render :edit
@@ -40,7 +38,7 @@ class ProductsController < ApplicationController
         if @products.present?
             @products.present?
         end
-        redirect_to products_path
+        redirect_to static_pages_path
     end
 
 

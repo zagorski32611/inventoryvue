@@ -18,7 +18,7 @@ class CustomersController < ApplicationController
     def create
         @customers = Customer.new(customer_params)
         @customers.save
-        redirect_to products_url
+        redirect_to static_pages_url
     end
 
     def update
@@ -35,7 +35,7 @@ class CustomersController < ApplicationController
     def destroy
         @customers = Customer.find(params[:id])
         if @customers.present?
-            @customers.present?
+            @customers.destroy!
         end
         redirect_to customer_path
     end
