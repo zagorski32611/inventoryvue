@@ -24,6 +24,12 @@ document.addEventListener ('DOMContentLoaded', () => {
         }    
     })
 
+    var showCustomer = new Vue({
+        el: "#show_customers_button",
+        data: {
+            isShow: false,
+        }    
+    })
 
     var newCustomer = new Vue({
         el: "#new_customer_button",

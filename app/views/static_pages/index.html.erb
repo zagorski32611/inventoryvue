@@ -10,6 +10,8 @@
         </div>
     </div>
     
+    <br />
+    
     <div id="add_products_button">
         <button v-on:click="isShow = !isShow" class="control"> Add Inventory </button>
         <div v-show="isShow" class="content">
@@ -20,34 +22,28 @@
     <br/>
     
     <div id="sell_products_button">
-        <button class="btn btn-primary"> Sale </button>
-    </div>
-    
-    <br/>
-    
-    <div id="sell_products">
-        <%= render 'layouts/sell_products' %>
+        <button v-on:click="isShow = !isShow" class="control"> Sale </button>
+        <div v-show="isShow" class="content">
+            <%= render 'layouts/sell_products' %>
+        </div>
     </div>
     
     <br/>
     
     <div id="show_customers_button">
-        <button class="btn btn-primary"> Customers </button>
-    </div>
-    
-    <br/>
-
-    <div id="show_customers">
-        <%= render 'layouts/view_customers'%>
+        <button v-on:click="isShow = !isShow" class="control"> Customers </button>
+        <div v-show="isShow" class="content">
+            <%= render 'layouts/view_customers'%>
+        </div>
     </div>
 
     <br/>
 
     <div id="new_customer_button">
-        <button class="btn btn-primary"> New Customer </button>
-    </div>
-    <div id="new_customer">
-        <%= render 'layouts/new_customer' %>
+        <button v-on:click="isShow = !isShow" class="control"> New Customer </button>
+        <div v-show="isShow">
+            <%= render 'layouts/new_customer' %>
+        </div>
     </div>
 
 
