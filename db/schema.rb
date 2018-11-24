@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_23_220422) do
+ActiveRecord::Schema.define(version: 2018_11_24_142541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,9 @@ ActiveRecord::Schema.define(version: 2018_11_23_220422) do
     t.string "sku"
     t.integer "quantity"
     t.string "vendor"
+    t.integer "cost"
+    t.integer "retail_price"
+    t.integer "wholesale_price"
   end
 
 end

@@ -6,6 +6,9 @@
             <th> SKU </th>
             <th> Quantity </th>
             <th> Vendor </th>
+            <th> Cost </th>
+            <th> Retail Price </th>
+            <th> Wholesale </th>
         </tr>
         <% @products.each do |pr| %>
         <tr>
@@ -14,6 +17,9 @@
             <td><%= pr.sku %></td>
             <td><%= pr.quantity %></td>
             <td><%= pr.vendor %></td>
+            <td><%= pr.cost %></td>
+            <td><%= pr.retail_price %><td>
+            <td><%= pr.wholesale_price %></td>
         </tr>
         <% end %>
     <% else %>
