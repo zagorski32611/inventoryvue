@@ -9,6 +9,7 @@ class StaticPagesController < ApplicationController
     def edit
         @customer = Customer.find(params[:id])
     end
+    
 
 
 end

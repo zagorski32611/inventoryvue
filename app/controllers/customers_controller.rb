@@ -25,7 +25,7 @@ class CustomersController < ApplicationController
         @customers = Customer.find(params[:id])
         if @customers.update(customer_params)
             flash[:success] = "Updated product information"
-            redirect_to customer_path
+            redirect_to static_pages_url
         else
             flash[:alert] = "Error!"
             render :edit
