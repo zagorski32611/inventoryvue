@@ -5,6 +5,7 @@
             <th> Last Name </th>
             <th> Company </th>
             <th> Phone Number </th>
+            <th> Edit </th>
         </tr>
         <% @customers.each do |cu| %>
         <tr>
@@ -12,6 +13,7 @@
             <td><%= cu.last_name %></td>
             <td><%= cu.company %></td>
             <td><%= cu.phone_number %></td>
+            <td><%= link_to 'Edit', edit_customer_path(cu) %></td>
         </tr>
         <% end %>
     <% else %>

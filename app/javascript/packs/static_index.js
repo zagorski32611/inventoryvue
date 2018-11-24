@@ -37,4 +37,11 @@ document.addEventListener ('DOMContentLoaded', () => {
             isShow: false
         }
     })
+
+    var editCustomer = new Vue({
+        el: "#edit_customer_button",
+        data: {
+            isShow: false
+        }
+    })
 })

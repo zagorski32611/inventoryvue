@@ -12,7 +12,7 @@ class CustomersController < ApplicationController
     end
 
     def edit
-        @customers = Customer.find(params[:id])
+        @customer = Customer.find(params[:id])
     end
 
     def create
