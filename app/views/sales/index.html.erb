@@ -1,0 +1,24 @@
+<h1> All Sales </h1>
+<table class="table">
+    <% unless @sales.nil? %>
+        <tr>
+            <th> Customer ID </th>
+            <th> Products ID </th>
+            <th> Price </th>
+            <th> Sales Tax </th>
+        </tr>
+        <% @sales.each do |p| %>
+        <tr>
+            <td><%= p.customers_id %></td>
+            <td><%= p.products_id %></td>
+            <td><%= p.price %></td>
+            <td><%= p.sales_tax %></td>
+
+        </tr>
+        <% end %>
+    <% else %>
+        <h3> No sales to show :( </h3>
+        <% link_to root_path %>
+    <% end %>
+</table>
+

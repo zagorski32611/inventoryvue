@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   resources :static_pages
   resources :products 
+  resources :sales
   resources :customers
 end

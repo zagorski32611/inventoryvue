@@ -1,6 +1,7 @@
 <table class="table">    
     <% unless @products.nil? %>
         <tr>
+            <th> ID </th>
             <th> Name </th>
             <th> Part Number </th>
             <th> SKU </th>
@@ -12,6 +13,7 @@
         </tr>
         <% @products.each do |pr| %>
         <tr>
+            
             <td><%= pr.name %></td>
             <td><%= pr.part_number %></td>
             <td><%= pr.sku %></td>
