@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_20_195729) do
+ActiveRecord::Schema.define(version: 2019_01_26_042347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,18 +38,14 @@ ActiveRecord::Schema.define(version: 2019_01_20_195729) do
   end
 
   create_table "sales", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "price"
-    t.integer "sales_tax"
-    t.integer "product_id"
-    t.bigint "products_id"
-    t.bigint "customers_id"
-    t.index ["customers_id", "created_at"], name: "index_sales_on_customers_id_and_created_at"
-    t.index ["customers_id"], name: "index_sales_on_customers_id"
-    t.index ["products_id"], name: "index_sales_on_products_id"
+    t.string "price"
+    t.string "sales_tax"
+    t.bigint "customer_id"
+    t.bigint "product_id"
+    t.index ["customer_id"], name: "index_sales_on_customer_id"
+    t.index ["product_id"], name: "index_sales_on_product_id"
   end
 
-  add_foreign_key "sales", "customers", column: "customers_id"
-  add_foreign_key "sales", "products", column: "products_id"
+  add_foreign_key "sales", "customers"
+  add_foreign_key "sales", "products"
 end

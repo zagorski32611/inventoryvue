@@ -1,5 +1,5 @@
 <div>
-    <%= form_for @customer do |cu| %>
+    <%= form_for Customer.new do |cu| %>
         <%= cu.label :first_name %>
         <%= cu.text_field :first_name %>
 

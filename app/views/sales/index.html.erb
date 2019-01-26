@@ -3,14 +3,14 @@
     <% unless @sales.nil? %>
         <tr>
             <th> Customer ID </th>
-            <th> Products ID </th>
+            <th> Product ID </th>
             <th> Price </th>
             <th> Sales Tax </th>
         </tr>
         <% @sales.each do |p| %>
         <tr>
-            <td><%= p.customers_id %></td>
-            <td><%= p.products_id %></td>
+            <td><%= p.customer_id %></td>
+            <td><%= p.product_id %></td>
             <td><%= p.price %></td>
             <td><%= p.sales_tax %></td>
 

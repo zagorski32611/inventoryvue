@@ -12,20 +12,25 @@ class SalesController < ApplicationController
 
     def create
         @sale = Sale.new(sale_params)
-        @sale.save
-        redirect_to static_pages_path
+        if @sale.save
+            flash[:success] = "Sold!"
+        else
+            render 'static_pages/index'
+        end
+    end
+
+    def destroy
     end
 
 
     def update
     end
-    
-    
+        
 
     private
 
     def sale_params
-        params.require(:sale).permit(:retail_price, :sales_tax, customer_ids:[], product_ids:[])
+        params.require(:sale).permit(:price, :sales_tax, :customers_id, :product_id)
     end
     
 end
