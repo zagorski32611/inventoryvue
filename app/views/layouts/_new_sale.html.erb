@@ -1,9 +1,7 @@
-<h1> New Sale </h1>
-<table class="table">
+<div>
     <%= form_for Sale.new do |s|%>
-    <div>
-        <%= s.label :customers_id %>
-        <%= s.text_field :customers_id %>
+        <%= s.label :customer_id %>
+        <%= s.text_field :customer_id %>
 
         <%= s.label :product_id %>
         <%= s.text_field :product_id %>
@@ -16,5 +14,4 @@
 
         <%= s.submit "Save", class: "btn btn-primary" %>
     <% end %>
-    </div>
-</table>
+</div>

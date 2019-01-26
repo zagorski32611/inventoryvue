@@ -14,6 +14,7 @@ class SalesController < ApplicationController
         @sale = Sale.new(sale_params)
         if @sale.save
             flash[:success] = "Sold!"
+            render 'static_pages/index'
         else
             render 'static_pages/index'
         end
@@ -30,7 +31,7 @@ class SalesController < ApplicationController
     private
 
     def sale_params
-        params.require(:sale).permit(:price, :sales_tax, :customers_id, :product_id)
+        params.require(:sale).permit(:price, :sales_tax, :customer_id, :product_id)
     end
     
 end
